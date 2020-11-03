@@ -1,0 +1,28 @@
+
+
+<div >
+  <div class="split left">
+    <button (click)="Back()" class="btn">Back</button>
+    <div class="centered" >
+      <div  > 
+  
+        <div class="image"  *ngIf="!videoExists" > 
+             <img src="{{movie.poster_path}}" style="border-radius: 10%; margin-top: 50%; margin-left: 20px; ">    
+        </div>
+        <iframe  [src]='GetVideo()' width="750" height="500" frameborder="0" *ngIf="videoExists" allowfullscreen style="border-radius: 1%;" > </iframe>
+    
+      </div>
+    </div>
+  </div>
+  
+  <div class="split right">
+    <div class="centered" style="    margin-top: -20%; margin-left: -20px;">
+      <div >
+        <h3> Title: {{movie.title}}</h3>
+
+        <h3 > Overview: {{movie.overview}}</h3>
+      </div> 
+    </div> 
+    
+    </div>
+  </div>

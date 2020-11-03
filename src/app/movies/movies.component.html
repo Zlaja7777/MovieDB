@@ -1,0 +1,28 @@
+
+<div class="main" >
+  <div class="tab" >
+
+        <button  style="background-color: #00B4CC; font-weight: bold; color: white;">Movies</button>
+        <button (click)="GetTvShows()" >TV Shows</button>
+
+</div>
+
+<div class="search">
+    
+<input type="text" class="searchTerm"  placeholder="What are you looking for?"  (keyup)="onChange($event.target.value)" value="{{searchText}}" >
+<button type="submit" class="searchButton">
+</button>
+
+</div>
+<h2 style="margin-top: 90px;font-family: Source Sans Pro, Arial, sans-serif" *ngIf="searchText.length ===0">Top Rated Movies</h2>
+<h2 style="margin-top: 90px;font-family: Source Sans Pro, Arial, sans-serif" *ngIf="searchText.length > 0">Searching: {{searchText}}</h2>
+
+    <div class="imagee"  > 
+        <div class="image" *ngFor="let m of movies let i = index" style="margin-top: 3%;" > 
+            <img src="{{m.poster_path}}" class="img" (click) = "GetDetails(m.id)" >
+            <div style=" width: 50%;" >
+              <h4 style="margin-left: 10px; font-family: Source Sans Pro, Arial, sans-serif" > {{m.title}}</h4>
+            </div>
+        </div>
+      </div>
+    </div>
