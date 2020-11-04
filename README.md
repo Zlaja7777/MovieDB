@@ -1,6 +1,7 @@
 # MovieShowApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+# The app is live here: http://zlajaa-001-site1.dtempurl.com/
 
 ## Development server
 Firstly, run `npm install` an then 
